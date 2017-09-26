@@ -4,13 +4,15 @@
         <title>Register</title>
     </head>
     <body>
-        <h2>Register</h2>
+        <h1>Register</h1>
         <form>
-            <label for="first">First Name:</label>
-            <input name="firstName" id="first" type="text" placeholder="John" required>
-            <label for="last">Last Name:</label>
-            <input name="lastName" id="last" type="text" placeholder="Smith" required>
-
+            <div>
+                <label for="first">First Name:</label>
+                <input name="firstName" id="first" type="text" placeholder="John" required>
+                <label for="last">Last Name:</label>
+                <input name="lastName" id="last" type="text" placeholder="Smith" required>
+            </div>
+            
             <div>
                 <label for="male">Male</label>
                 <input name="gender" id="male" type="radio" value="male">
@@ -20,25 +22,38 @@
                 <input name="gender" id="other" type="radio" value="other">
             </div>
 
-            <label for="email">Email:</label>
-            <input name="email" id="email" type="email" placeholder="your email" required>
-            <label for="password">Password:</label>
-            <input name="password" id="password" type="password">
+            <div>
+                <label>
+                    Email:
+                    <input name="email" type="email" placeholder="your email" required>
+                </label>
+
+                <label>
+                    Password:
+                    <input name="password" type="password" pattern=".{5,10}" placeholder="your password" required title="5 to 10 characters">
+                </label>
+            </div>
+            
 
             <div>
                 <label>
                     Birthday:
-                    <select>
+                    <select name="month">
+                        <option>Month</option>
                         <option>Jan</option>
                         <option>Fab</option>
                         <option>Mar</option>
                     </select>
-                    <select>
+
+                    <select name="day">
+                        <option>Day</option>
                         <option>10</option>
                         <option>11</option>
                         <option>12</option>
                     </select>
-                    <select>
+
+                    <select name="year">
+                        <option>Year</option>
                         <option>1991</option>
                         <option>1992</option>
                         <option>1993</option>
@@ -46,12 +61,16 @@
                 </label>
             </div>
 
+            <!-- why this i agree label never shows ??? e... -->
             <div>
-                <label for="terms">I agree to the terms and conditions</label>
-                <input name="terms" id="terms" type="checkbox">
+                <label for="checkbox">I agree to the terms and conditions</label>
+                <input type="checkbox" name="checkbox" id="checkbox">
+            </div>
+
+            <div>
+                <input type="submit" value="Submit">
             </div>
 
         </form>
-        <button>Submit</button>
     </body>
 </html>
