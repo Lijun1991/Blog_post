@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+    </head>
+    <body>
+        <h2>Register</h2>
+        <form>
+            <label for="first">First Name:</label>
+            <input name="firstName" id="first" type="text" placeholder="John" required>
+            <label for="last">Last Name:</label>
+            <input name="lastName" id="last" type="text" placeholder="Smith" required>
+
+            <div>
+                <label for="male">Male</label>
+                <input name="gender" id="male" type="radio" value="male">
+                <label for="female">Female</label>
+                <input name="gender" id="female" type="radio" value="femal">
+                <label for="other">Other</label>
+                <input name="gender" id="other" type="radio" value="other">
+            </div>
+
+            <label for="email">Email:</label>
+            <input name="email" id="email" type="email" placeholder="your email" required>
+            <label for="password">Password:</label>
+            <input name="password" id="password" type="password">
+
+            <div>
+                <label>
+                    Birthday:
+                    <select>
+                        <option>Jan</option>
+                        <option>Fab</option>
+                        <option>Mar</option>
+                    </select>
+                    <select>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                    <select>
+                        <option>1991</option>
+                        <option>1992</option>
+                        <option>1993</option>
+                    </selsect>
+                </label>
+            </div>
+
+            <div>
+                <label for="terms">I agree to the terms and conditions</label>
+                <input name="terms" id="terms" type="checkbox">
+            </div>
+
+        </form>
+        <button>Submit</button>
+    </body>
+</html>

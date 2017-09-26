@@ -89,12 +89,12 @@ app.get("/blogs/:id/edit", function(req, res){
 
 //UPDATE ROUTE
 app.put("/blogs/:id", function(req, res){
-    Blog.findByIdAndUpdate(req.params.id, req.body.blog, function(err, found){
+    Blog.findByIdAndUpdate(req.params.id, req.body.blog, function(err, updatedBlog){
         if (err){
-            console.log(err);
-            // res.redirect("/blogs");
+            // console.log(err);
+            res.redirect("/blogs");
         }else{
-            res.redirect("/blogs" + req.params.id);
+            res.redirect("/blogs/" + req.params.id);
         }
     })
 });
